@@ -3,7 +3,7 @@ package CGI::Application::Plugin::DevPopup;
 use warnings;
 use strict;
 
-our $VERSION = '0.9';
+our $VERSION = '0.91';
 
 use base 'Exporter';
 use HTML::Template;
@@ -204,7 +204,8 @@ provided to show how it works:
 Now whenever you access a runmode, a window pops up over your content, showing
 information about how long the various stages have taken. Adding other
 CAP::DevPopup plugins will get you more information. A HTML::Tidy plugin
-showing you how your document conforms to W3C standards is in the works. 
+showing you how your document conforms to W3C standards is available: seer
+L<CGI::Application::Plugin::HtmlTidy>.
 
 The output consists of a Table of Contents, and a bunch of reports. A rough
 translation into plain text could look like this:
