@@ -1,5 +1,8 @@
 Revision history for CGI-Application-Plugin-DevPopup
 
+0.92    2005-10-05  Rhesa Rozendaal <rhesa@cpan.org>
+    - Moved HTTP Headers to its own module
+
 0.91    2005-10-04  Rhesa Rozendaal <rhesa@cpan.org>
     - Added HTTP Headers report
     - Updated docs to reflect availability of CAP::HtmlTidy

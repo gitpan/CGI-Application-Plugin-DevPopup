@@ -3,7 +3,7 @@ NAME
     window
 
 VERSION
-    Version 0.91
+    Version 0.92
 
 SYNOPSIS
   End user information
@@ -22,7 +22,7 @@ SYNOPSIS
     showing information about how long the various stages have taken. Adding
     other CAP::DevPopup plugins will get you more information. A HTML::Tidy
     plugin showing you how your document conforms to W3C standards is
-    available: see CGI::Application::Plugin::HtmlTidy.
+    available: seer CGI::Application::Plugin::HtmlTidy.
 
     The output consists of a Table of Contents, and a bunch of reports. A
     rough translation into plain text could look like this:
@@ -81,6 +81,15 @@ SYNOPSIS
     while the plugin and its plugins are still loaded, they won't modify
     your output.
 
+Available Plugins
+    o   CGI::Application::Plugin::DevPopup::Timing and
+        CGI::Application::Plugin::DevPopup::HTTPHeaders are bundled with
+        this distribution.
+
+    o   CGI::Application::Plugin::HtmlTidy integrates with this module.
+
+    o   CGI::Application::Plugin::TT integrates with this module.
+
 EXPORTS
     * devpopup
         This method is the only one exported into your module, and can be
@@ -131,8 +140,8 @@ BUGS
     Please report any bugs or feature requests to
     bug-cgi-application-plugin-devpopup@rt.cpan.org, or through the web
     interface at
-    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=CGI-Application-Plugin-
-    DevPopup>. I will be notified, and then you'll automatically be notified
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=CGI-Application-Plugin-D
+    evPopup>. I will be notified, and then you'll automatically be notified
     of progress on your bug as I make changes.
 
 ACKNOWLEDGEMENTS

@@ -3,7 +3,7 @@ package CGI::Application::Plugin::DevPopup;
 use warnings;
 use strict;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 use base 'Exporter';
 use HTML::Template;
@@ -51,7 +51,6 @@ sub _devpopup_output
       $props{$type} !~ /html/i;                         # else skip any other types.
 
     my $devpopup = $self->devpopup;
-    _http_headers($devpopup);                           # add http headers report    
     $self->call_hook( 'devpopup_report', $outputref );  # process our callback hook
 
     my $tmpl = HTML::Template->new(
@@ -92,22 +91,6 @@ sub _devpopup_output
     {
         $$outputref .= $js;
     }
-}
-
-sub _http_headers
-{
-    my $self = shift;
-    my $r=0;
-    my $report = join $/, map {
-                    $r=1-$r;
-                    qq{<tr class="@{[$r?'odd':'even']}"><td valign="top"> $_ </td><td> $ENV{$_} </td></tr>}
-                }
-                sort keys %ENV;
-    $self->add_report(
-        title => 'HTTP Headers',
-        summary => 'List of environment variables',
-        report => '<style>tr.even{background-color:#eee}</style><table>' . $report . '</table>'
-    );
 }
 
 sub _escape_js
@@ -184,7 +167,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-Version 0.9
+Version 0.92
 
 =head1 SYNOPSIS
 
@@ -262,6 +245,25 @@ in your production code, an environment variable named CAP_DEVPOPUP_EXEC has to
 be set to 1 for this module to function. Absense of the environment variable
 turns this module into a no-op: while the plugin and its plugins are still
 loaded, they won't modify your output.
+
+=head1 Available Plugins
+
+=over 4
+
+=item o
+
+L<CGI::Application::Plugin::DevPopup::Timing> and L<CGI::Application::Plugin::DevPopup::HTTPHeaders>
+are bundled with this distribution.
+
+=item o
+
+L<CGI::Application::Plugin::HtmlTidy> integrates with this module.
+
+=item o
+
+L<CGI::Application::Plugin::TT> integrates with this module.
+
+=back
 
 =head1 EXPORTS
 
