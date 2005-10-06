@@ -3,7 +3,7 @@ package CGI::Application::Plugin::DevPopup::HTTPHeaders;
 use strict;
 use base qw/Exporter/;
 
-our $VERSION = '0.1';
+our $VERSION = '0.11';
 
 sub import
 {
@@ -27,7 +27,7 @@ sub _header_report
         <style type="text/css">
         tr.even{background-color:#eee}
         </style>
-        <table><thead><th colspan="2">Incoming HTTP(S) Headers</th></thead><tbody> $cgi </tbody></table>
+        <table><thead><th colspan="2">Incoming HTTP Headers</th></thead><tbody> $cgi </tbody></table>
         <table><thead><th colspan="2">Outgoing HTTP Headers</th></thead><tbody><tr><td style="white-space:pre">$out</td></tr></tbody></table>
         <table><thead><th colspan="2">Environment Dump</th></thead><tbody><tr><td> $env </td></tr></tbody></table>
         )

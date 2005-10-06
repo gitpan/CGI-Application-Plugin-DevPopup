@@ -3,7 +3,7 @@ package CGI::Application::Plugin::DevPopup;
 use warnings;
 use strict;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 use base 'Exporter';
 use HTML::Template;
@@ -70,8 +70,10 @@ sub _devpopup_output
 
     my $js = qq{
     <script language="javascript">
-    var devpopup_window = window.open("", "devpopup_window", "height=400,width=600");
+    var devpopup_window = window.open("", "devpopup_window", "height=400,width=600,scrollbar,resizable");
     devpopup_window.document.write("$h");
+    devpopup_window.document.write("\t<s");
+    devpopup_window.document.write("cript type=\\"text/javascript\\">");
     devpopup_window.document.write("$j");
     devpopup_window.document.write("\t<");
     devpopup_window.document.write("/script>");
@@ -96,6 +98,7 @@ sub _devpopup_output
 sub _escape_js
 {
     my $j = shift;
+    $j =~ s/\r//g;
     $j =~ s/\\/\\\\/g;
     $j =~ s/"/\\"/g;
     $j =~ s/\n/\\n" + \n\t"/g;
@@ -121,7 +124,6 @@ $head = <<HEAD;
 HEAD
 
 $script = <<JS;
-    <script type="text/javascript">
         function swap(id1,id2)
         {
             var d1 = document.getElementById(id1);
@@ -167,7 +169,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-Version 0.92
+Version 0.93
 
 =head1 SYNOPSIS
 
@@ -242,9 +244,12 @@ please do so with this variable, and not through a callback at postrun.
 
 Since this is primarily a development plugin, and you wouldn't want it to run
 in your production code, an environment variable named CAP_DEVPOPUP_EXEC has to
-be set to 1 for this module to function. Absense of the environment variable
-turns this module into a no-op: while the plugin and its plugins are still
-loaded, they won't modify your output.
+be set to 1 for this module to function, and it must be present at compile
+time. This means you should place it in a BEGIN{} block, or use SetEnv or
+PerlSetEnv (remember to set those before any PerlRequire or PerlModule lines).
+
+Absense of the environment variable turns this module into a no-op: while the
+plugin and its plugins are still loaded, they won't modify your output.
 
 =head1 Available Plugins
 
@@ -252,8 +257,9 @@ loaded, they won't modify your output.
 
 =item o
 
-L<CGI::Application::Plugin::DevPopup::Timing> and L<CGI::Application::Plugin::DevPopup::HTTPHeaders>
-are bundled with this distribution.
+L<CGI::Application::Plugin::DevPopup::Timing> and
+L<CGI::Application::Plugin::DevPopup::HTTPHeaders> are bundled with this
+distribution.
 
 =item o
 
