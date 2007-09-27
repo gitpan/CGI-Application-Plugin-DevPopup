@@ -1,16 +1,13 @@
---- #YAML:1.0
-name:                CGI-Application-Plugin-DevPopup
-version:             0.951
-abstract:            Runtime cgiapp info in a popup window
-license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.31
-distribution_type:   module
-requires:     
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         CGI-Application-Plugin-DevPopup
+version:      1.00
+version_from: lib/CGI/Application/Plugin/DevPopup.pm
+installdirs:  site
+requires:
     CGI::Application:              4.01
     Test::More:                    0
     Time::HiRes:                   0
-meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
-    version: 1.2
-author:
-    - Rhesa Rozendaal <rhesa@cpan.org>
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30_01
