@@ -1,9 +1,11 @@
 package CGI::Application::Plugin::DevPopup::HTTPHeaders;
+our $VERSION = '1.03';
+
 
 use strict;
+use warnings;
+no warnings 'uninitialized'; # don't care about empty strings
 use base qw/Exporter/;
-
-our $VERSION = '0.11';
 
 sub import
 {
@@ -86,6 +88,10 @@ __END__
 
 CGI::Application::Plugin::DevPopup::HTTPHeaders - show incoming and outgoing HTTP headers
 
+=head1 VERSION
+
+version 1.03
+
 =head1 SYNOPSIS
 
     use CGI::Application::Plugin::DevPopup;
@@ -123,4 +129,3 @@ This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
-

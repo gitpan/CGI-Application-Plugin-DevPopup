@@ -1,9 +1,9 @@
 package CGI::Application::Plugin::DevPopup;
+our $VERSION = '1.03';
+
 
 use warnings;
 use strict;
-
-our $VERSION = '1.01';
 
 use base 'Exporter';
 use HTML::Template;
@@ -103,6 +103,7 @@ sub _escape_js
     $j =~ s/\\/\\\\/g;
     $j =~ s/"/\\"/g;
     $j =~ s/\n/\\n" + \n\t"/g;
+    $j =~ s/script>/s" + "cript>/g;
     $j;
 }
 
@@ -184,7 +185,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-Version 1.01
+version 1.03
 
 =head1 SYNOPSIS
 
@@ -386,4 +387,3 @@ This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
-

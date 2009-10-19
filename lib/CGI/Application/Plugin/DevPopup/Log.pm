@@ -1,11 +1,11 @@
 package CGI::Application::Plugin::DevPopup::Log;
+our $VERSION = '1.03';
+
 
 use strict;
 use IO::Scalar;
 use base qw/Exporter/;
 use vars qw($VERSION @EXPORT);
-
-our $VERSION = '0.01';
 
 @EXPORT = qw(devpopup_log_handle);
 
@@ -71,6 +71,10 @@ __END__
 =head1 NAME
 
 CGI::Application::Plugin::DevPopup::Log - show all data written to an IO::Scalar handle.
+
+=head1 VERSION
+
+version 1.03
 
 =head1 SYNOPSIS
 
@@ -138,5 +142,3 @@ This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
-
-

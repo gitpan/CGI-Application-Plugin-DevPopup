@@ -1,11 +1,11 @@
 package CGI::Application::Plugin::DevPopup::Timing;
+our $VERSION = '1.03';
+
 
 use strict;
 use base qw/Exporter/;
 use Time::HiRes qw/gettimeofday tv_interval/;
 my $start = [gettimeofday];
-
-our $VERSION = '0.91';
 
 sub import
 {
@@ -68,9 +68,17 @@ sub _new_or_self
     return $self;
 }
 
+1;    # End of CGI::Application::Plugin::DevPopup::Timing
+
+__END__
+
 =head1 NAME
 
 CGI::Application::Plugin::DevPopup::Timing - show timing information about cgiapp stages
+
+=head1 VERSION
+
+version 1.03
 
 =head1 SYNOPSIS
 
@@ -127,6 +135,3 @@ This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
-
-1;    # End of CGI::Application::Plugin::DevPopup::Timing
-

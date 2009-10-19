@@ -1,15 +1,17 @@
-.cvsignore
 Changes
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+dist.ini
 lib/CGI/Application/Plugin/DevPopup.pm
 lib/CGI/Application/Plugin/DevPopup/HTTPHeaders.pm
 lib/CGI/Application/Plugin/DevPopup/Log.pm
 lib/CGI/Application/Plugin/DevPopup/Timing.pm
-Makefile.PL
-MANIFEST
-META.yml			Module meta-data (added by MakeMaker)
-README
 t/00-load.t
 t/01-basics.t
 t/02-production.t
+t/03-httpheaders.t
 t/pod-coverage.t
 t/pod.t
