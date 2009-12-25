@@ -1,5 +1,5 @@
 package CGI::Application::Plugin::DevPopup::Log;
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 
 use strict;
@@ -55,7 +55,7 @@ sub devpopup_log_handle
 
     unless (ref $this->{__DEVPOPUP_LOGFH})
     {
-        my $data;
+        my $data = '';
         $this->{__DEVPOPUP_LOGDATA} = \$data;
         my $fh = new IO::Scalar \$data;
         $this->{__DEVPOPUP_LOGFH} = $fh;
@@ -74,7 +74,7 @@ CGI::Application::Plugin::DevPopup::Log - show all data written to an IO::Scalar
 
 =head1 VERSION
 
-version 1.03
+version 1.04
 
 =head1 SYNOPSIS
 

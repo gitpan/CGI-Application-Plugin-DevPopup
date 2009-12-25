@@ -13,5 +13,6 @@ t/00-load.t
 t/01-basics.t
 t/02-production.t
 t/03-httpheaders.t
+t/RT53100.t
 t/pod-coverage.t
 t/pod.t

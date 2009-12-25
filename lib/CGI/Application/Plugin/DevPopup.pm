@@ -1,5 +1,5 @@
 package CGI::Application::Plugin::DevPopup;
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 
 use warnings;
@@ -185,7 +185,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-version 1.03
+version 1.04
 
 =head1 SYNOPSIS
 

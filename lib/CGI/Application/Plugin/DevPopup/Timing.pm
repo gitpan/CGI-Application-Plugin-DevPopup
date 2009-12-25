@@ -1,5 +1,5 @@
 package CGI::Application::Plugin::DevPopup::Timing;
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 
 use strict;
@@ -78,7 +78,7 @@ CGI::Application::Plugin::DevPopup::Timing - show timing information about cgiap
 
 =head1 VERSION
 
-version 1.03
+version 1.04
 
 =head1 SYNOPSIS
 
