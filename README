@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution CGI-Application-Plugin-DevPopup, version
-1.04:
+1.05:
 
   Runtime cgiapp info in a popup window
 
-This software is copyright (c) 2009 by Rhesa Rozendaal.
+This software is copyright (c) 2010 by Rhesa Rozendaal.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as perl itself.

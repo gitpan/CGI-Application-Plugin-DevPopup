@@ -11,4 +11,6 @@ requires:
   IO::Scalar: '0'
   Test::More: '0'
   Time::HiRes: '0'
-version: '1.04'
+resources:
+  repository: http://github.com/rhesa/cgi-application-plugin-devpopup
+version: '1.05'
