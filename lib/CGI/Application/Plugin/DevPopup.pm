@@ -1,5 +1,5 @@
 package CGI::Application::Plugin::DevPopup;
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 
 use warnings;
@@ -74,8 +74,11 @@ sub _devpopup_output
     var devpopup_window = window.open("", "devpopup_window", "height=400,width=600,scrollbars,resizable");
     devpopup_window.document.write("$h");
     devpopup_window.document.write("\t<s");
-    devpopup_window.document.write("cript type=\\"text/javascript\\">");
+    devpopup_window.document.write("cript type=\\"text/javascript\\">\\n");
+    devpopup_window.document.write("//"+"<"+"![CDATA[\\n");
+    
     devpopup_window.document.write("$j");
+    devpopup_window.document.write("//]"+"]>\\n");
     devpopup_window.document.write("\t<");
     devpopup_window.document.write("/script>");
     devpopup_window.document.write("$o");
@@ -185,7 +188,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 SYNOPSIS
 

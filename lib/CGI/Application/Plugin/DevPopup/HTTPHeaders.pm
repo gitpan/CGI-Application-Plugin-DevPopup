@@ -1,5 +1,5 @@
 package CGI::Application::Plugin::DevPopup::HTTPHeaders;
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 
 use strict;
@@ -90,7 +90,7 @@ CGI::Application::Plugin::DevPopup::HTTPHeaders - show incoming and outgoing HTT
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 SYNOPSIS
 

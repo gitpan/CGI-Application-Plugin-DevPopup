@@ -13,4 +13,4 @@ requires:
   Time::HiRes: '0'
 resources:
   repository: http://github.com/rhesa/cgi-application-plugin-devpopup
-version: '1.05'
+version: '1.06'

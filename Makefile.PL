@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'CGI::Application::Plugin::DevPopup',
   AUTHOR    => 'Rhesa\ Rozendaal\ \<rhesa\@cpan\.org\>',
   ABSTRACT  => 'Runtime cgiapp info in a popup window',
-  VERSION   => '1.05',
+  VERSION   => '1.06',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

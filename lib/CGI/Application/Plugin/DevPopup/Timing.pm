@@ -1,5 +1,5 @@
 package CGI::Application::Plugin::DevPopup::Timing;
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 
 use strict;
@@ -33,7 +33,7 @@ sub _timer_report
         report  => '<style>
 			th { text-align:left; border-bottom:solid 1px black; }
 			</style>' .
-			'Application started at: ' . scalar( gmtime( $start->[0] ) ) . ' GMT<br>' .
+			'Application started at: ' . scalar( gmtime( $start->[0] ) ) . ' GMT<br/>' .
 			'<table width="100%"><tr><th>From</th><th>To</th><th>Time taken</th></tr>' .
 			join(
 			  $/,
@@ -78,7 +78,7 @@ CGI::Application::Plugin::DevPopup::Timing - show timing information about cgiap
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 SYNOPSIS
 
