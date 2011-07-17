@@ -1,6 +1,7 @@
 package CGI::Application::Plugin::DevPopup;
-our $VERSION = '1.06';
-
+BEGIN {
+  $CGI::Application::Plugin::DevPopup::VERSION = '1.07';
+}
 
 use warnings;
 use strict;
@@ -188,7 +189,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-version 1.06
+version 1.07
 
 =head1 SYNOPSIS
 
@@ -233,9 +234,6 @@ translation into plain text could look like this:
 
 The reports expand and collapse by clicking on the ToC entry or the report
 header.
-
-You can see a (developer) version in action here:
-L<http://oss.rhesa.com/cpan/cap-devpopup/example>.
 
 =head2 Developer information
 

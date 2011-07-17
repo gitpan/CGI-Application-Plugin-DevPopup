@@ -1,6 +1,7 @@
 package CGI::Application::Plugin::DevPopup::Log;
-our $VERSION = '1.06';
-
+BEGIN {
+  $CGI::Application::Plugin::DevPopup::Log::VERSION = '1.07';
+}
 
 use strict;
 use IO::Scalar;
@@ -74,7 +75,7 @@ CGI::Application::Plugin::DevPopup::Log - show all data written to an IO::Scalar
 
 =head1 VERSION
 
-version 1.06
+version 1.07
 
 =head1 SYNOPSIS
 
