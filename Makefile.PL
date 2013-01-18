@@ -9,26 +9,26 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Runtime cgiapp info in a popup window',
-  'AUTHOR' => 'Rhesa Rozendaal <rhesa@cpan.org>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "ABSTRACT" => "Runtime cgiapp info in a popup window",
+  "AUTHOR" => "Rhesa Rozendaal <rhesa\@cpan.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'CGI-Application-Plugin-DevPopup',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'CGI::Application::Plugin::DevPopup',
-  'PREREQ_PM' => {
-    'CGI::Application' => '4.01',
-    'HTML::Template' => '0',
-    'IO::Scalar' => '0',
-    'Test::More' => '0',
-    'Time::HiRes' => '0'
+  "DISTNAME" => "CGI-Application-Plugin-DevPopup",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "CGI::Application::Plugin::DevPopup",
+  "PREREQ_PM" => {
+    "CGI::Application" => "4.01",
+    "HTML::Template" => 0,
+    "IO::Scalar" => 0,
+    "Test::More" => 0,
+    "Time::HiRes" => 0
   },
-  'VERSION' => '1.07',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "1.08",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

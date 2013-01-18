@@ -1,6 +1,6 @@
 package CGI::Application::Plugin::DevPopup::Timing;
-BEGIN {
-  $CGI::Application::Plugin::DevPopup::Timing::VERSION = '1.07';
+{
+  $CGI::Application::Plugin::DevPopup::Timing::VERSION = '1.08';
 }
 
 use strict;
@@ -79,7 +79,7 @@ CGI::Application::Plugin::DevPopup::Timing - show timing information about cgiap
 
 =head1 VERSION
 
-version 1.07
+version 1.08
 
 =head1 SYNOPSIS
 

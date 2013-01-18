@@ -1,6 +1,6 @@
 package CGI::Application::Plugin::DevPopup;
-BEGIN {
-  $CGI::Application::Plugin::DevPopup::VERSION = '1.07';
+{
+  $CGI::Application::Plugin::DevPopup::VERSION = '1.08';
 }
 
 use warnings;
@@ -189,7 +189,7 @@ CGI::Application::Plugin::DevPopup - Runtime cgiapp info in a popup window
 
 =head1 VERSION
 
-version 1.07
+version 1.08
 
 =head1 SYNOPSIS
 
@@ -264,7 +264,7 @@ be set to 1 for this module to function, and it must be present at compile
 time. This means you should place it in a BEGIN{} block, or use SetEnv or
 PerlSetEnv (remember to set those before any PerlRequire or PerlModule lines).
 
-Absense of the environment variable turns this module into a no-op: while the
+Absence of the environment variable turns this module into a no-op: while the
 plugin and its plugins are still loaded, they won't modify your output.
 
 =head1 Available Plugins
